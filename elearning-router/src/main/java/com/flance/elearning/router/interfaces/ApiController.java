@@ -31,17 +31,7 @@ public class ApiController {
                 .apiEntity(new ApiEntity())
                 .build();
 
-        List<ApiEntity> list = apiDomain.list();
-        list.forEach(api -> {
-            RouteEntity routeEntity = new RouteEntity();
-            routeEntity.setRouteId(api.getRouteId());
-            RouteDomain routeDomain = RouteDomain.builder()
-                    .routeEntity(routeEntity)
-                    .routerService(routerService)
-                    .build();
-            api.setRouteEntity(routeDomain.getByRouteId());
-        });
-        return list;
+        return apiDomain.list();
     }
 
 }
