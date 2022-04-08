@@ -32,3 +32,8 @@ spring:
           group: dev
           data-id: flance-elearning-mysql.yml
           file-extension: yml
+        # saas 系统表
+        extension-configs[4]:
+          group: dev
+          data-id: flance-saas-common.yml
+          file-extension: yml
