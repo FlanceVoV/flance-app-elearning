@@ -3,6 +3,9 @@ package com.flance.elearning.router.domain.app.domain.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.flance.jdbc.mybatis.common.BaseEntity;
+import com.flance.saas.db.annotation.Column;
+import com.flance.saas.db.annotation.Table;
+import com.flance.saas.db.tables.common.BaseTable;
 import com.flance.web.utils.route.AppModel;
 import com.google.common.collect.Lists;
 import lombok.Data;
@@ -16,23 +19,32 @@ import java.util.List;
  */
 @Data
 @TableName("sys_flance_app")
+@Table(tableName = "sys_flance_app")
 @EqualsAndHashCode(callSuper = true)
-public class AppEntity  extends BaseEntity<String> implements AppModel {
+public class AppEntity  extends BaseTable implements AppModel {
 
+    @Column(length = "500")
     private String appRsaPubKey;
 
+    @Column(length = "2000")
     private String sysRsaPriKey;
 
+    @Column(length = "500")
     private String sysRsaPubKey;
 
+    @Column(length = "64")
     private String appName;
 
+    @Column(length = "64")
     private String appId;
 
+    @Column
     private Integer enabled;
 
+    @Column(length = "2000")
     private String serverResource;
 
+    @Column(length = "2000")
     private String apiResource;
 
     @TableField(exist = false)

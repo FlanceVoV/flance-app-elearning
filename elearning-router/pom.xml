@@ -54,6 +54,12 @@
             <artifactId>flance-web-utils</artifactId>
         </dependency>
 
+        <dependency>
+            <artifactId>flance-saas-tenant</artifactId>
+            <groupId>com.flance</groupId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
