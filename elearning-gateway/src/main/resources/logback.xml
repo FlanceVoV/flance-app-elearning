@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
+    <conversionRule conversionWord="customcolor" converterClass="com.flance.web.utils.LogbackColorful"/>
     <conversionRule conversionWord="logId" converterClass="com.flance.web.utils.LoggerIdConverter"/>
     <contextName>flance-saas</contextName>
     <timestamp key="TIMESTAMP" datePattern="yyyy-MM-dd" />
@@ -10,13 +11,13 @@
     <!-- ConsoleAppender 控制台输出日志 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
+<!--            <level>INFO</level>-->
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>
         <!-- 对日志进行格式化 -->
         <encoder>
-            <pattern>[LOGID:[%logId]] %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger -%msg%n</pattern>
+            <pattern>%customcolor([LOGID:[%logId]] %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger -%msg%n)</pattern>
         </encoder>
     </appender>
 

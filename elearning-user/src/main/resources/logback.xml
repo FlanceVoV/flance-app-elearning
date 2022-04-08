@@ -4,7 +4,7 @@
     <conversionRule conversionWord="logId" converterClass="com.flance.web.utils.LoggerIdConverter"/>
     <contextName>flance-saas</contextName>
     <timestamp key="TIMESTAMP" datePattern="yyyy-MM-dd" />
-    <property name="log_dir" value="D:\\tmp\\logs\\e-learning\\router" />
+    <property name="log_dir" value="D:\\tmp\\logs\\e-learning\\user" />
     <!-- 日志最大的历史 30天 -->
     <property name="maxHistory" value="180"/>
 
