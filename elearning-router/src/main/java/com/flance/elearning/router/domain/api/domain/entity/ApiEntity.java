@@ -22,6 +22,9 @@ public class ApiEntity extends BaseTable implements RouteApiModel {
     private String apiId;
 
     @Column(notNull = true, length = "64")
+    private String appId;
+
+    @Column(notNull = true, length = "64")
     private String routeId;
 
     @Column(notNull = true, length = "64")

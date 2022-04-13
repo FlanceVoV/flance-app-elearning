@@ -9,6 +9,8 @@ public class ApiEntity implements RouteApiModel {
 
     private String apiId;
 
+    private String appId;
+
     private String routeId;
 
     private String apiName;
