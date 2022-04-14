@@ -1,6 +1,6 @@
 spring:
   application:
-    name: elearning-tenant
+    name: tenant-tenant
   cloud:
     nacos:
       username: nacos

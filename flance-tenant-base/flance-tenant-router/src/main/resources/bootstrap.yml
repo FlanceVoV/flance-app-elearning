@@ -1,6 +1,6 @@
 spring:
   application:
-    name: elearning-router
+    name: tenant-router
   cloud:
     nacos:
       username: nacos
