@@ -24,6 +24,12 @@
             <version>1.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.flance.tenant</groupId>
+            <artifactId>flance-tenant-biz-training</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

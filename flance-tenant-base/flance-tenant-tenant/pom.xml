@@ -59,6 +59,14 @@
             <groupId>com.flance</groupId>
             <version>1.0</version>
         </dependency>
+
+        <!-- biz 子模块 start -->
+        <dependency>
+            <groupId>com.flance.tenant</groupId>
+            <artifactId>flance-tenant-biz-training</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- biz 子模块 end-->
     </dependencies>
 
 </project>
