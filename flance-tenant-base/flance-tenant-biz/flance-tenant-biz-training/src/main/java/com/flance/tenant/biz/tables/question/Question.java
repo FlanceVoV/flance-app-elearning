@@ -42,6 +42,12 @@ public class Question extends BaseTable implements TreeModel<Question, String> {
     private String questionDesc;
 
     /**
+     * 题目文件资源路径
+     */
+    @Column
+    private String questionResourceUrl;
+
+    /**
      * 题目类型（如：选择、填空、问答...）
      */
     @Column(notNull = true)
@@ -70,6 +76,18 @@ public class Question extends BaseTable implements TreeModel<Question, String> {
      */
     @Column
     private Integer sort;
+
+    /**
+     * 判题模式0.系统 1.人工
+     */
+    @Column(notNull = true)
+    private Integer reviewType;
+
+    /**
+     * 分值
+     */
+    @Column(notNull = true)
+    private Double score;
 
     /**
      * 子集题目
