@@ -23,6 +23,7 @@
         <module>flance-tenant-tenant</module>
         <module>flance-tenant-user</module>
         <module>flance-tenant-router</module>
+        <module>flance-tenant-biz</module>
     </modules>
 
 </project>

@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>flance-tenant-elearning</artifactId>
+        <artifactId>flance-tenant-app</artifactId>
         <groupId>com.flance.tenant</groupId>
         <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>elearning-api</artifactId>
+    <artifactId>elearning-service</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -24,11 +24,6 @@
             <version>1.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.flance.tenant</groupId>
-            <artifactId>elearning-service</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
 
 </project>
