@@ -23,9 +23,17 @@ public class RsaSendDemo {
 
     private final static String FLANCE_PRI_KEY = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCxsf6iMlsx/8d0R8GGCm206ti5VmYzkam3T6weTUdSNNOObDdr4hNH1WcNZNRZ/oOkyqBk8Ez1vlHCPcdIwFdSyUgpVapCcwwwu1OY6+FhlL+J+JgL7F1sOPZFyubA8a0DXrztZbVvsm9UdQbqSL1eqjeyV5cVjx8HijdLCU6+dr4t07T6iu02DdXwXldEJDOHKaznjAn/6zok3ZPIBSOiek5NEyNFkJ/98PF+xOVwdMhwOZY+P02jKOdmLrvzRochaVfJK0n2xNfjg1a0SoNISwq0ZjriUEGzLqWLmbyVNXmq4r8DTtmkkgYtIgFILdQSRMvPe0EU20eUwkks079hAgMBAAECggEBAIVUPvFIw3CSsP+oz6ZZsNNs20zFbU4IX8WxvD3IUll2Vb6pqDQEn97oWriMDWGxPOmrOApE3BoPwZzzadJGr77oVILfSi8tz9nI1QMLCkODruxBYSShJ8AKRY88nUPskprSvQOLq0WyJyLB5HxqM90R71SbsDt29htcM/zTcQgrIIYBRHrCtTQx3Di/NaMx2JbIHEbFrBh6fqO2+b/aPgpw5m3WrfzqvAcrkabVxi9NQgKT7OvfR4XOfj1oT82T+C7mGDB92wFEZaRuY2ry5YuHhb5iBVammigc4UqlMaTTpRBeo1DOd8W4G3wTOXA7wiXV1o389amCvJMYURhDyIECgYEA+ifQwKR4NLsaTYU/4SMWGdX20i2cAtuaciXf5jem9JieOeGEOcAWiQg2yTeBlh3xRfIQ6zSyE7J73SFFdVUq4255OXXqftsdIzajziJa7cNNpckIhKhBDhhB/q4JdsMMO2a9KyYz0y2AJLGa7TF5oDndqCIhoL6T5JBR7vucFAkCgYEAtdjLFMJSEUToTnudVGm2drBfWYzlQeK3grv7M+U0eUsbWVgCVzFywTUDcXOsUe4dFyVYQ5Ws5x4NJzG6vQCwpZw6WbOrBPDdZ/nkAEJwRh2FKP+xB7fTiV16T22Mdd9LWoDkWRc/UYjiqp7nabLzXsQG04bEB0cwlYQ12077FpkCgYAYEfCyOKEgYch8IRAud5PO1Jm1S5IxbDQGO8K5gi1cZ7sB0sNIU0VX1iR/ZAniCeuHUW1zVFS2NHxaoLLwQUupKp4be08e+bJqCv3j/cZGDn7QLvHU4eOwmYDwIorilI3+wTn+huSBs2UbIsPHgvUzB55eaTpXHz9XxNM9bZRtEQKBgEJ6DFN8bi/t9taqDevL8W4WL+U2wqCBVwCt47km8zXcJRVWPRTO+Np0nNueo8IXv/60Ij4iu2CJ9dj8Lv3lAK6qHBKqwbw+qVHXYmhN4WlgZUuFnZvqsaQnzgy3SX/Vr2BYeiGvg/A0kFg7WvGi/6EHHE+7lnHqrnIaMO4JQ3URAoGASgs2rsScEUm+93cQGkVi2XFVczTsmMzR3wmJvU8tlhBeYg6axaNyS9FHho7mUlbg51wb8jzPj5lcNxE72Yf93woj33XOlaYGpKCBXdE+dQ4sBZ7Hx2/9JF0TIACh0YNx3m6DsP2HuAq9W6N8YGxE5O7OFWuXnyf9RtaXk0c8d9I=";
 
+    private final static String GD_PRI_KEY = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCw5S7W4agxc42KJ03ePAm+QTV+1rfrLvZYMnVzb03a6Ol1W7nNTE5GH5XFBEdPSLjfH+EIUWPsxmmgfqpW7SX1mAgtbuiyIulVa5W5rVpOAn+OzQovZffa20zE6farQfqJAjl9gAZfBAwYueaBowtvP2VWhHbuNG1j8DQ886QayW8mBM3ExfrQUVlI8ysFCNVc8fYVcQ/Gk3DKGv73kOZKxQOqQrdTDlMzDD0xb7LjpC7L7YA4orx0na+GNBZ7zYqyN2So5uRK/AGj+Uw4vjChGlv7RWM7bbn7f3AMXmdSAbrURvO98o5qfF3fsMIGEXA4nIxXs1xQCob8pX9jbLMFAgMBAAECggEAZsKMJinqYefFhkb01i+8XThWUjt7lfSvCGcvkYJMEOoSjKlfUyKLqfK5Nz0YC7esJXnIaOOXD7nnLGPIojybO4M45OOz65+aOpQH41gPyJds8FCuJQCwLgQNIarkL3Jhjuuq5/vSN6oLOOXtQMutXc/PF6ZVzGTKUy77uZizcRcx4om9gHb8k+WhbXd3btpPKMXZ8kTg1JZo1Gppc6+nYFLmvhybCtl2Ce5Z1YH2TwH+XSDI5w9z1nwgEASmKhgpvKpXnAKw5/F3NHIKKLQLkfPZGzOP01fnw1djevG2eM5u5kp3nXx4c2QzWljwg9TD8kooWGGwd5lCJBcgVFXJtQKBgQDYXazwP0fhdhwwwmBaqmA2qIeqaB6I13rpuLXl2Zg6SOZ7UftFKg5oYKaXBlVaeMNyDSuyZXrRgg1bo9ree3r413LMkVyVNUOwc4F2jnvNHw1YKfH4XY3ZWpAbT4T/WRDt9RtbiiGRlmcX2mIhYE94luwnLA7yW0bow7Rtd/LI8wKBgQDRTI76LBcK3nrCVg78LksqdHJ0PLEfoem1202eKbmGFtjezH4Q82/6Zj28QHlanBxrYyT8paML9RldYnYeVGaVE58GEmahZjGTNzKM4hpkDzX3IqbI7TG5gwmoYq6d5BNpgJIX5ZJzxm9mluY1BubFUfcd7FHJd0AnR/LPCzUSJwKBgA44+ilAv6TecrPx0wuir3hoU6Kr/XXZVEcQ0UQurYcHS79HgFDnltLdp5W94NZ1ocNZgknTyeMDvYUMnFKLo2XAI9e2pnNYcP6kWRpF+3VcWTA2caV14OEsxtREweVXIXnC5u15gwNi85vpyxGOlyrCIPviNYlQ3rRmSPH5NIhpAoGAUPYDbKR3eV3cMKZnf4dMzixjRbFgdrMEG7OsT50mRcc6ttx1e4sfasX35YUvLCytFaExYoWUD4ENAcGfnVXapJoFbqzZhF9ql97HMBYaTVBQ+LsvtxOBo5gbuUYK88qQ88OnP5UvVJeS6iU/AY4c4IE3TRzn+j2l1EwRkaNtMQsCgYAe3ZpvupvwnOOwPDe7z5vhFQWNhtHWlBNg7lgqUAvSwfmSkzhYi5M8X2CivAfemvXJIVgD3ehGUJifnlNd8Z4F3iGg4cgzgtOxF2pP767FsYQMohVV3o7ZZX38Ici5bL8Yv/RkrF2uukpjSJ/Hp8Ve2D6SsDdenJON0puT/MupRw==";
+
+    private final static String GD_PUB_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsOUu1uGoMXONiidN3jwJvkE1fta36y72WDJ1c29N2ujpdVu5zUxORh+VxQRHT0i43x/hCFFj7MZpoH6qVu0l9ZgILW7osiLpVWuVua1aTgJ/js0KL2X32ttMxOn2q0H6iQI5fYAGXwQMGLnmgaMLbz9lVoR27jRtY/A0PPOkGslvJgTNxMX60FFZSPMrBQjVXPH2FXEPxpNwyhr+95DmSsUDqkK3Uw5TMww9MW+y46Quy+2AOKK8dJ2vhjQWe82KsjdkqObkSvwBo/lMOL4woRpb+0VjO225+39wDF5nUgG61EbzvfKOanxd37DCBhFwOJyMV7NcUAqG/KV/Y2yzBQIDAQAB";
+
+    private final static String HS_PUB_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvY5ym7iJYHcDK9QMd4sKkm/duByvgshaotBfkM+gHVrtAbobmZny7naVXHUz9tFa/3dq3G/cX9DSpMp6jZ4IJ76YHdv7jIAUiLbh4vYnz2726WyyoJ7d5Kkf4UNGXilCPGp0tg4hwUADpE1RmTar50skHQ6GgaJFJnHA+AHoh6rg5q1uMPZ+lkuPJL336A7I8RMmVeaQbFHCAqCo7LWza6N3l3zY5oYGiuaifhILg37Mazqd+8EeuPBDuydUXIuLr1HGFPOHOO23flUDKqkA7X4lwhB/hYnDWzbSPlgNbqGo7bFcrC2zUKY/V/4U/bVB6uhJF2k9+24eenT6JgSwdwIDAQAB";
+
+    private final static String HS_PRI_KEY = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9jnKbuIlgdwMr1Ax3iwqSb924HK+CyFqi0F+Qz6AdWu0BuhuZmfLudpVcdTP20Vr/d2rcb9xf0NKkynqNnggnvpgd2/uMgBSItuHi9ifPbvbpbLKgnt3kqR/hQ0ZeKUI8anS2DiHBQAOkTVGZNqvnSyQdDoaBokUmccD4AeiHquDmrW4w9n6WS48kvffoDsjxEyZV5pBsUcICoKjstbNro3eXfNjmhgaK5qJ+EguDfsxrOp37wR648EO7J1Rci4uvUcYU84c47bd+VQMqqQDtfiXCEH+FicNbNtI+WA1uoajtsVysLbNQpj9X/hT9tUHq6EkXaT37bh56dPomBLB3AgMBAAECggEAGl3iGz8D/OMREduhEE/K3Kuqz51N3Ic59EO/x0jaILsxFHhqtmbvn7Pm+sFixQZB/h8CQj9dDAbkBgAUI/bDc6PTTPP4fYajVJD7wrIyv2vT9IwmHKl8e/36bT8KXrame/ji2yAEGflpiEUpAILWTonpMBGBLC8CJ2LTUKwTSCuDHCFuTcVMrgGofNGzzRIikVgcDagQyotWxJVMaCe4aeQ3sgPBDM65Z28bqshLR3SB9NjHzBPWolAiy7fRb106kCdbe6GhOZPPYo7xJT89mQlC5AX4g7q9nao7PbtIzzUudW6U/Wt+GoqsmFLDCJN3nOYMekrMOVh0N41M0dc8wQKBgQDzvcHTCMyNmBpYaI2Cbac99YEXHBeOZTUSQaHd5NtSX5tooOvONdBQPnVpZa+BNkypZwb9xHa2keq1JYJc4AVehKNHqqeay7jQXKpZPPAxtyik7IDnCxFz53H4cxOvmjt8dmXYl0XChP8zSfsI1NH//n6Cbn045VTVWHHDOrb7DwKBgQDHFwtwfnHDhM9qrKBSdzRxYtbEI8niY8fXLxOonewcev7qR+ivdmq51SIrADwthiczfapz7xKdcuEEwoDDnOmli65Hg6bjA1zdhFbfuraYYy+JrBZDnxxGOtJq0CN+rCELQVjtcnac8LMXNBwdeiT3Gfj1RGgvp8WOU/TwLOcUGQKBgQDCBhapcAKs4BxwreGfprwPtUNqawFRZ70kaDx6zzfLTbH/SsIK54mIpv99w+U+XUQPQaUuEttRH7yPMGmilu2PPNRhMzayIWNf8bPkz36AhMWE64L86DGfauitlqVgDs01mWYfUOPGIWqooEaF1CvKtQJtv5hM1zl9jycX+sA3/wKBgAQ7UCnu9hoSy5nX23yFPh8e27PFkvf16PyA6qkN2kPstVhjeOWp3bDff99sHNtW26Rzilj2fu3L0E6al8QQpMK5ClZIzRZMLwAiXPpabKEmko8ZkkuTqTUw8OIGVIrPu9ASboJ1iWHil9vpZqOVwg1ihvEnqBNDPKa+0Bj+y1aZAoGBAO5GiJ5QA0Pw6dwCcOx2CdRKmhoMOzbAjZH918XRyWH9MqHLwCmaFU0xqnlA6DhCx0vhCmSMdXpgF5aWkeifIwd5I2fq4WMpzi7OQzbUpcZWkzD5aauT9d7u8QmhPdDvvUZZmPaaXfMdaGtxdg6HzEjj6++fOgEJuStwFal8VcUM";
+
     public static void main(String[] args) throws Exception {
 //        RsaUtil.generateKeyPair();
-        System.out.println(decode());
+        getSend();
 //        System.out.println(getSend());
     }
 
@@ -65,21 +73,22 @@ public class RsaSendDemo {
         byte[] dataBytes = Base64Utils.encode(data.getBytes(StandardCharsets.UTF_8));
 
         // 使用flance的公钥加密
-        byte[] encodeDataBytes = RsaUtil.encryptByPublicKey(dataBytes, FLANCE_PUB_KEY);
+        byte[] encodeDataBytes = RsaUtil.encryptByPublicKey(dataBytes, HS_PUB_KEY);
         String enCodeStr = Base64Utils.encodeToString(encodeDataBytes);
 
         // 待签名
         String signData = enCodeStr + timestamp;
 
         // 使用自己的私钥加签
-        byte[] signBytes = RsaUtil.sign(signData.getBytes(StandardCharsets.UTF_8), SELF_PRI_KEY);
+        byte[] signBytes = RsaUtil.sign(signData.getBytes(StandardCharsets.UTF_8), GD_PRI_KEY);
         String signStr = Base64Utils.encodeToString(signBytes);
 
         byte[] signDataBytes = (enCodeStr + timestamp).getBytes(StandardCharsets.UTF_8);
-        System.out.println(RsaUtil.verify(signDataBytes, signStr, SELF_PUB_KEY));
+        System.out.println(RsaUtil.verify(signDataBytes, signStr, GD_PUB_KEY));
 
-        byte[] de = RsaUtil.decryptByPrivateKey(Base64Utils.decodeFromString(enCodeStr), FLANCE_PRI_KEY);
+        byte[] de = RsaUtil.decryptByPrivateKey(Base64Utils.decodeFromString(enCodeStr), HS_PRI_KEY);
         System.out.println(new String(Base64Utils.decode(de)));
+
 
         gatewayRequest.setData(enCodeStr);
         gatewayRequest.setSign(signStr);
@@ -92,5 +101,7 @@ public class RsaSendDemo {
         String sign = "";
 
     }
+
+
 
 }

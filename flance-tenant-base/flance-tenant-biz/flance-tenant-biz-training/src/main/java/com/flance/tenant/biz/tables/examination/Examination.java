@@ -12,15 +12,19 @@ import lombok.EqualsAndHashCode;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 考试
+ * @author jhf
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Table(tableName = "biz_elearning_examiation", indexes = {
+@Table(tableName = "biz_elearning_examination", indexes = {
         @Index(indexName = "idx_examination_title", columns = {"examination_title"}),
         @Index(indexName = "idx_start_time", columns = {"start_time"}),
         @Index(indexName = "idx_end_time", columns = {"end_time"}),
         @Index(indexName = "idx_examination_date", columns = {"examination_date"}),
 })
-@TableName("biz_elearning_examiation")
+@TableName("biz_elearning_examination")
 public class Examination extends BaseTable {
 
     @Column(notNull = true)
