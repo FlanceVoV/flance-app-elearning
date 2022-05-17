@@ -2,12 +2,17 @@ package com.flance.tenant.biz.tables.examination;
 
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.flance.saas.db.annotation.Column;
 import com.flance.saas.db.annotation.Index;
 import com.flance.saas.db.annotation.Table;
 import com.flance.saas.db.tables.common.BaseTable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * 用户答题卡-项目
+ * @author jfh
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Table(tableName = "biz_elearning_user_answer_paper", indexes = {
@@ -24,20 +29,28 @@ import lombok.EqualsAndHashCode;
 @TableName("biz_elearning_user_answer_paper")
 public class UserAnswerPaper extends BaseTable {
 
+    @Column(notNull = true)
     private String sort;
 
+    @Column(notNull = true)
     private String testPaperId;
 
+    @Column(notNull = true)
     private String userPaperId;
 
+    @Column(notNull = true)
     private String questionId;
 
+    @Column(notNull = true)
     private String paperQuestionId;
 
+    @Column
     private String answerContent;
 
+    @Column
     private Integer isCorrect;
 
+    @Column
     private Double score;
 
 }

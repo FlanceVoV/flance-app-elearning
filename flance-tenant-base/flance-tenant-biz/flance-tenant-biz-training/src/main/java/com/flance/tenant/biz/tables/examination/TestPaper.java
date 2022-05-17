@@ -11,6 +11,10 @@ import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
+/**
+ * 试卷
+ * @author jhf
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Table(tableName = "biz_elearning_test_paper", indexes = {
@@ -19,19 +23,22 @@ import java.util.List;
 @TableName("biz_elearning_test_paper")
 public class TestPaper extends BaseTable {
 
+    /**
+     * 试卷编号
+     */
     @Column(notNull = true)
     private String paperCode;
 
     /**
-     * 试卷时间限制，单位秒
+     * 所属题库
      */
     @Column(notNull = true)
-    private Long timeLimit;
+    private String questionBankId;
 
+    /**
+     * 试题
+     */
     @TableField(exist = false)
     private List<TestPaperQuestion> questions;
-
-    @TableField(exist = false)
-    private List<TestPaperAnswer> answers;
 
 }

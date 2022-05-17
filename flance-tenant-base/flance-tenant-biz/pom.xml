@@ -15,6 +15,7 @@
 
     <modules>
         <module>flance-tenant-biz-training</module>
+        <module>flance-tenant-biz-interact</module>
     </modules>
 
     <properties>

@@ -8,6 +8,10 @@ import com.flance.saas.db.tables.common.BaseTable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * 试卷-答案
+ * @author jhf
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Table(tableName = "biz_elearning_test_paper_answer", indexes = {
@@ -20,10 +24,13 @@ import lombok.EqualsAndHashCode;
 @TableName("biz_elearning_test_paper_answer")
 public class TestPaperAnswer extends BaseTable {
 
+    @Column(notNull = true)
     private String testPaperId;
 
+    @Column(notNull = true)
     private String questionId;
 
+    @Column(notNull = true)
     private String answerId;
 
     @Column(notNull = true)

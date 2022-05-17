@@ -10,6 +10,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 题库
+ * @author jhf
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -27,14 +28,14 @@ public class QuestionBank extends BaseTable {
     @Column(notNull = true)
     private String questionBankStars;
 
+    @Column(notNull = true)
+    private String subjectClassicId;
+
     @Column
     private String questionBankType;
 
     @Column
     private String questionBankBizType;
-
-    @Column
-    private String questionBankClassic;
 
     @Column
     private Integer questionCounts;

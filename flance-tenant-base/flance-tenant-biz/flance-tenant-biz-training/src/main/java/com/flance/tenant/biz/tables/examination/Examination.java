@@ -27,24 +27,51 @@ import java.util.List;
 @TableName("biz_elearning_examination")
 public class Examination extends BaseTable {
 
+    /**
+     * 考试标题
+     */
     @Column(notNull = true)
     private String examinationTitle;
 
+    /**
+     * 考试描述
+     */
     @Column(notNull = true, length = "1000")
     private String examinationDesc;
 
+    /**
+     * 考试日期、年度-月份
+     */
     @Column(notNull = true)
     private String examinationDate;
 
+    /**
+     * 考试开始时间
+     */
     @Column(notNull = true)
     private Date startTime;
 
+    /**
+     * 考试结束时间
+     */
     @Column(notNull = true)
     private Date endTime;
 
+    /**
+     * 考试所属学科、名目
+     */
+    @Column(notNull = true)
+    private String subjectClassicId;
+
+    /**
+     * 考试包含的考场
+     */
     @TableField(exist = false)
     private List<ExaminationHall> examinationHalls;
 
+    /**
+     * 所有考生
+     */
     @TableField(exist = false)
     private List<ExaminationUser> examinationUsers;
 

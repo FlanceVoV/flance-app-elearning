@@ -11,6 +11,10 @@ import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
+/**
+ * 用户答题卡
+ * @author jhf
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Table(tableName = "biz_elearning_user_test_paper", indexes = {

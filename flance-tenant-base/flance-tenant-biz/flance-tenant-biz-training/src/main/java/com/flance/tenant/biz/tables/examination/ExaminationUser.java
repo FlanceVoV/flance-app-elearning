@@ -28,15 +28,27 @@ import java.util.Date;
 @TableName("biz_elearning_examination_user")
 public class ExaminationUser extends BaseTable {
 
+    /**
+     * 考生 - 考试用户id
+     */
     @Column(notNull = true)
     private String userId;
 
+    /**
+     * 考试id
+     */
     @Column(notNull = true)
     private String examinationId;
 
+    /**
+     * 考生所属考场
+     */
     @Column(notNull = true)
     private String examinationHallId;
 
+    /**
+     * 考生的试卷
+     */
     @Column(notNull = true)
     private String userTestPaperId;
 
