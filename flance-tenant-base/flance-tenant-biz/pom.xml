@@ -34,6 +34,7 @@
             <artifactId>flance-tenant-tenant</artifactId>
             <version>1.0</version>
         </dependency>
+
     </dependencies>
 
 </project>

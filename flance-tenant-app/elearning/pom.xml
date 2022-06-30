@@ -25,8 +25,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.flance.tenant</groupId>
+            <artifactId>flance-tenant-biz-training</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
