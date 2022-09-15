@@ -2,7 +2,7 @@ package com.flance.tenant.gateway.client.fallback;
 
 import com.flance.web.gateway.client.RouterClient;
 import com.flance.web.gateway.client.fallback.RouterClientFallBack;
-import feign.hystrix.FallbackFactory;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 /**
  * router fallback，可以继承
