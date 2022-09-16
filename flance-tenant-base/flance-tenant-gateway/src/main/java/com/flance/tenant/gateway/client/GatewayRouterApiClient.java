@@ -1,15 +1,10 @@
 package com.flance.tenant.gateway.client;
 
-import com.flance.tenant.gateway.client.fallback.GatewayRouterClientFallBack;
+import com.flance.tenant.gateway.client.fallback.GatewayRouterApiClientFallBack;
 import com.flance.web.gateway.client.RouterApiClient;
-import com.flance.web.utils.web.response.WebResponse;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "tenant-router", contextId = "router.api", path = "/tenant-router/api", fallbackFactory = GatewayRouterClientFallBack.class)
+@FeignClient(name = "tenant-router", contextId = "router.api", path = "/tenant-router/api", fallbackFactory = GatewayRouterApiClientFallBack.class)
 public interface GatewayRouterApiClient extends RouterApiClient {
 
-    @Override
-    @GetMapping("/getApis")
-    WebResponse getApis();
 }

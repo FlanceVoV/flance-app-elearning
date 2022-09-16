@@ -9,6 +9,7 @@ import com.flance.web.utils.route.RouteApiModel;
 import com.flance.web.utils.web.response.WebResponse;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -30,8 +31,11 @@ public class RouteApiServiceImpl implements RouteApiService {
 
     @Override
     public RouteApiModel getOneByApiIdAndVersion(String apiId, String version) {
-        String result = redisUtils.get(BizConstant.API_KEY + ":" + apiId);
+        if (!StringUtils.hasLength(version)) {
+            version = BizConstant.API_VERSION_DEFAULT;
+        }
+        String result = redisUtils.get(BizConstant.API_KEY + ":" + apiId + ":" + version);
         Gson gson = new Gson();
-        return null == result ? null : gson.fromJson(result, ApiEntity.class);
+        return null == result ? null : gson.fromJson(result, RouteApiModel.class);
     }
 }

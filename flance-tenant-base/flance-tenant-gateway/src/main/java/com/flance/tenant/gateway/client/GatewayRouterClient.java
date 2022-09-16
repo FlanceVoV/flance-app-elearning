@@ -9,8 +9,5 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "tenant-router", contextId = "router.router", path = "/tenant-router/router", fallbackFactory = GatewayRouterClientFallBack.class)
 public interface GatewayRouterClient extends RouterClient {
 
-    @Override
-    @GetMapping("/getRouters")
-    WebResponse getRouters();
 
 }
