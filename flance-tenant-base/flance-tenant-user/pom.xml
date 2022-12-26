@@ -41,6 +41,11 @@
 
         <dependency>
             <groupId>com.flance</groupId>
+            <artifactId>flance-web-nacos</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flance</groupId>
             <artifactId>flance-jdbc-mybatis</artifactId>
         </dependency>
 
@@ -51,7 +56,7 @@
 
         <dependency>
             <groupId>com.flance</groupId>
-            <artifactId>flance-web-utils</artifactId>
+            <artifactId>flance-web-starter</artifactId>
         </dependency>
 
         <dependency>

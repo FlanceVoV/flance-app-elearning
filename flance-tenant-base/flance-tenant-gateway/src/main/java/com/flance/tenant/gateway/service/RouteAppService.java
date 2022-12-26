@@ -7,11 +7,13 @@ import com.flance.web.gateway.service.AppService;
 import com.flance.web.utils.RedisUtils;
 import com.flance.web.utils.route.AppModel;
 import com.flance.web.utils.web.response.WebResponse;
+import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.*;
 
 
 @Service
@@ -25,8 +27,16 @@ public class RouteAppService implements AppService {
 
     @Override
     public List<? extends AppModel> getApps() {
-        WebResponse webResponse = appClient.getApps();
-        return webResponse.getResultList(AppEntity.class);
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<WebResponse> future = executorService.submit(() -> appClient.getApps());
+        List<? extends AppModel> list = Lists.newArrayList();
+        try {
+            list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(AppEntity.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        executorService.shutdown();
+        return list;
     }
 
     @Override

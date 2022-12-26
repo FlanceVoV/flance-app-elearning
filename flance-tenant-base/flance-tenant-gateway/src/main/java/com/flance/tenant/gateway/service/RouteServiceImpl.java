@@ -6,6 +6,7 @@ import com.flance.tenant.gateway.route.RouteEntity;
 import com.flance.web.gateway.common.BizConstant;
 import com.flance.web.gateway.service.RouteService;
 import com.flance.web.utils.RedisUtils;
+import com.flance.web.utils.route.RouteApiModel;
 import com.flance.web.utils.route.RouteModel;
 import com.flance.web.utils.web.response.WebResponse;
 import com.google.common.collect.Lists;
@@ -18,6 +19,10 @@ import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Service
@@ -31,8 +36,16 @@ public class RouteServiceImpl implements RouteService {
 
     @Override
     public List<? extends RouteModel> getRouteLists() {
-        WebResponse webResponse = routerClient.getRouters();
-        return webResponse.getResultList(RouteEntity.class);
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<WebResponse> future = executorService.submit(() -> routerClient.getRouters());
+        List<? extends RouteModel> list = Lists.newArrayList();
+        try {
+            list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(RouteEntity.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        executorService.shutdown();
+        return list;
     }
 
     @Override
