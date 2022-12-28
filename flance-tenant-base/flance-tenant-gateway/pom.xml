@@ -19,20 +19,8 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <!-- alibaba spring cloud nacos config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-
-        <!-- alibaba spring cloud nacos discovery -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>com.flance</groupId>
+            <artifactId>flance-web-nacos</artifactId>
         </dependency>
 
         <dependency>
@@ -40,7 +28,6 @@
             <artifactId>flance-web-gateway</artifactId>
         </dependency>
         
-
     </dependencies>
 
 </project>
