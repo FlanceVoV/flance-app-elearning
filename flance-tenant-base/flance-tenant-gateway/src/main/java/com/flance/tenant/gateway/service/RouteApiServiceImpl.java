@@ -30,17 +30,22 @@ public class RouteApiServiceImpl implements RouteApiService {
     private RedisUtils redisUtils;
 
     @Override
-    public List<? extends RouteApiModel> getAllApi() {
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<WebResponse> future = executorService.submit(() -> gatewayRouterApiClient.getApis());
-        List<? extends RouteApiModel> list = Lists.newArrayList();
-        try {
-            list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(ApiEntity.class);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public List<? extends RouteApiModel> getAllApi(boolean async) {
+        if (async) {
+            ExecutorService executorService = Executors.newSingleThreadExecutor();
+            Future<WebResponse> future = executorService.submit(() -> gatewayRouterApiClient.getApis());
+            List<? extends RouteApiModel> list = Lists.newArrayList();
+            try {
+                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(ApiEntity.class);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            executorService.shutdown();
+            return list;
+        } else {
+            WebResponse webResponse = gatewayRouterApiClient.getApis();
+            return webResponse.getResultList(ApiEntity.class);
         }
-        executorService.shutdown();
-        return list;
     }
 
     @Override

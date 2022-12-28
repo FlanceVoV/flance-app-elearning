@@ -35,17 +35,22 @@ public class RouteServiceImpl implements RouteService {
     private GatewayRouterClient routerClient;
 
     @Override
-    public List<? extends RouteModel> getRouteLists() {
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<WebResponse> future = executorService.submit(() -> routerClient.getRouters());
-        List<? extends RouteModel> list = Lists.newArrayList();
-        try {
-            list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(RouteEntity.class);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public List<? extends RouteModel> getRouteLists(boolean async) {
+        if (async) {
+            ExecutorService executorService = Executors.newSingleThreadExecutor();
+            Future<WebResponse> future = executorService.submit(() -> routerClient.getRouters());
+            List<? extends RouteModel> list = Lists.newArrayList();
+            try {
+                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(RouteEntity.class);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            executorService.shutdown();
+            return list;
+        } else {
+            WebResponse webResponse = routerClient.getRouters();
+            return webResponse.getResultList(RouteEntity.class);
         }
-        executorService.shutdown();
-        return list;
     }
 
     @Override

@@ -26,17 +26,23 @@ public class RouteAppService implements AppService {
     AppClient appClient;
 
     @Override
-    public List<? extends AppModel> getApps() {
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<WebResponse> future = executorService.submit(() -> appClient.getApps());
-        List<? extends AppModel> list = Lists.newArrayList();
-        try {
-            list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(AppEntity.class);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public List<? extends AppModel> getApps(boolean async) {
+        if (async) {
+            ExecutorService executorService = Executors.newScheduledThreadPool(6);
+            Future<WebResponse> future = executorService.submit(() -> appClient.getApps());
+            List<? extends AppModel> list = Lists.newArrayList();
+            try {
+                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(AppEntity.class);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            executorService.shutdown();
+            return list;
+        } else {
+            WebResponse webResponse = appClient.getApps();
+            return webResponse.getResultList(AppEntity.class);
         }
-        executorService.shutdown();
-        return list;
+
     }
 
     @Override
