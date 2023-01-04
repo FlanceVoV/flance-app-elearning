@@ -17,6 +17,32 @@
     </properties>
 
     <dependencies>
+        <!-- alibaba spring cloud nacos config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- alibaba spring cloud nacos discovery -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flance</groupId>
+            <artifactId>flance-web-feign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.flance</groupId>
+            <artifactId>flance-web-nacos</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.flance</groupId>
@@ -33,10 +59,6 @@
             <artifactId>flance-web-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.flance</groupId>
-            <artifactId>flance-web-feign</artifactId>
-        </dependency>
 
         <dependency>
             <artifactId>flance-saas-tenant</artifactId>
