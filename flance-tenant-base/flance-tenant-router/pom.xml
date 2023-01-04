@@ -24,8 +24,8 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.flance</groupId>
+            <artifactId>flance-web-feign</artifactId>
         </dependency>
 
         <dependency>
