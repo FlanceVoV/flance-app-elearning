@@ -11,6 +11,10 @@
     <packaging>pom</packaging>
     <modules>
         <module>elearning</module>
+        <module>elearning-exam</module>
+        <module>elearning-exam/elearning-exam-api</module>
+        <module>elearning-exam/elearning-exam-common</module>
+        <module>elearning-exam/elearning-exam-service</module>
     </modules>
 
     <artifactId>flance-tenant-app</artifactId>

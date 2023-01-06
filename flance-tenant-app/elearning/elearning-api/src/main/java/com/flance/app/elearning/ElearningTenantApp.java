@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableFeignClients
-@MapperScan(value = {"com.flance.*.*.domain.*.mapper"})
+@MapperScan(value = {"com.flance.*.*.domain.*.service"})
 @ComponentScan(value = {"com.flance"})
 public class ElearningTenantApp {
 }
