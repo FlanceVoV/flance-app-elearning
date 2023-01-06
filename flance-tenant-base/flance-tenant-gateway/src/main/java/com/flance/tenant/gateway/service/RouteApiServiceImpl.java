@@ -5,6 +5,7 @@ import com.flance.tenant.gateway.route.ApiEntity;
 import com.flance.web.gateway.common.BizConstant;
 import com.flance.web.gateway.service.RouteApiService;
 import com.flance.web.utils.RedisUtils;
+import com.flance.web.utils.route.AppApiLimitModel;
 import com.flance.web.utils.route.RouteApiModel;
 import com.flance.web.utils.web.response.WebResponse;
 import com.google.common.collect.Lists;
@@ -55,5 +56,10 @@ public class RouteApiServiceImpl implements RouteApiService {
         String result = redisUtils.get(BizConstant.API_KEY + ":" + apiId + ":" + version);
         Gson gson = new Gson();
         return null == result ? null : gson.fromJson(result, RouteApiModel.class);
+    }
+
+    @Override
+    public AppApiLimitModel getOneByAppIdAndApiId(String appId, String apiId) {
+        return null;
     }
 }

@@ -7,7 +7,6 @@
     <modules>
         <module>flance-tenant-base</module>
         <module>flance-tenant-app</module>
-        <module>elearning-exam</module>
     </modules>
 
     <parent>
