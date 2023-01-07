@@ -2,6 +2,7 @@ package com.flance.tenant.gateway.service;
 
 import com.flance.tenant.gateway.client.GatewayRouterApiClient;
 import com.flance.tenant.gateway.route.ApiEntity;
+import com.flance.tenant.gateway.route.RouteEntity;
 import com.flance.web.gateway.common.BizConstant;
 import com.flance.web.gateway.service.RouteApiService;
 import com.flance.web.utils.RedisUtils;
@@ -55,7 +56,7 @@ public class RouteApiServiceImpl implements RouteApiService {
         }
         String result = redisUtils.get(BizConstant.API_KEY + ":" + apiId + ":" + version);
         Gson gson = new Gson();
-        return null == result ? null : gson.fromJson(result, RouteApiModel.class);
+        return null == result ? null : gson.fromJson(result, ApiEntity.class);
     }
 
     @Override

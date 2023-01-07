@@ -2,20 +2,16 @@ spring:
   application:
     name: tenant-gateway
   cloud:
-    inetutils:
-      preferredNetworks:
-        - 192.168
-        - 172.21
     nacos:
       username: nacos
       password: nacos
       discovery:
         namespace: flance-elearning
-        server-addr: 172.19.63.225:8848
+        server-addr: 172.25.30.25:8848
         group: flance-elearning
       config:
         namespace: flance-elearning
-        server-addr: 172.19.63.225:8848
+        server-addr: 172.25.30.25:8848
         # 网关路由
         extension-configs[0]:
           group: dev

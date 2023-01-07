@@ -11,11 +11,11 @@ spring:
       password: nacos
       discovery:
         namespace: flance-elearning
-        server-addr: 127.0.0.1:8848
+        server-addr: 172.25.30.25:8848
         group: flance-elearning
       config:
         namespace: flance-elearning
-        server-addr: 127.0.0.1:8848
+        server-addr: 172.25.30.25:8848
 
         # 应用配置
         extension-configs[0]:
