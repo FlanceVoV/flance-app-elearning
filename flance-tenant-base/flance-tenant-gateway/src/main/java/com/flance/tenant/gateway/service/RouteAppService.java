@@ -32,7 +32,7 @@ public class RouteAppService implements AppService {
             Future<WebResponse> future = executorService.submit(() -> appClient.getApps());
             List<? extends AppModel> list = Lists.newArrayList();
             try {
-                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(AppEntity.class);
+                list = future.get(1500L, TimeUnit.MILLISECONDS).getResultList(AppEntity.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -37,7 +37,7 @@ public class RouteApiServiceImpl implements RouteApiService {
             Future<WebResponse> future = executorService.submit(() -> gatewayRouterApiClient.getApis());
             List<? extends RouteApiModel> list = Lists.newArrayList();
             try {
-                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(ApiEntity.class);
+                list = future.get(1500L, TimeUnit.MILLISECONDS).getResultList(ApiEntity.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -41,7 +41,7 @@ public class RouteServiceImpl implements RouteService {
             Future<WebResponse> future = executorService.submit(() -> routerClient.getRouters());
             List<? extends RouteModel> list = Lists.newArrayList();
             try {
-                list = future.get(500L, TimeUnit.MILLISECONDS).getResultList(RouteEntity.class);
+                list = future.get(1500L, TimeUnit.MILLISECONDS).getResultList(RouteEntity.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }
