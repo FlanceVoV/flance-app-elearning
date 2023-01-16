@@ -1,6 +1,7 @@
 package com.flance.tenant.user.interfaces;
 
 import com.flance.saas.tenant.domain.user.domain.vo.LoginUser;
+import com.flance.saas.tenant.domain.user.domain.vo.MerchantUserRegisterRsp;
 import com.flance.saas.tenant.domain.user.domain.vo.MerchantUserRegisterVo;
 import com.flance.saas.tenant.interfaces.user.MerchantUserInterface;
 import com.flance.tenant.user.domain.LoginVo;
@@ -25,8 +26,8 @@ public class MerchantUserController {
     }
 
     @PostMapping("/register")
-    public void register(@RequestBody @Validated MerchantUserRegisterVo merchantUserRegisterVo) {
-        merchantUserInterface.registerMerchantUser(merchantUserRegisterVo.parseToEntity());
+    public MerchantUserRegisterRsp register(@RequestBody @Validated MerchantUserRegisterVo merchantUserRegisterVo) {
+        return merchantUserInterface.registerMerchantUser(merchantUserRegisterVo.parseToEntity());
     }
 
 }
